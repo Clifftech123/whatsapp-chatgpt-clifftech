@@ -4,8 +4,9 @@
 	"description": "a bot that uses OpenAI chatgpt to respond to whatsapp messages",
 	"main": "server.ta",
 	"scripts": {
-		"start": " node src/server.ts ",
-		"dev": " nodemon --exec ts-node src/server.ts "
+		"start": "npx vite-node dist/server.js",
+		"dev": "npx vite-node src/server.ts",
+		"build": "tsc -p ."
 	},
 	"repository": {
 		"type": "git",
