@@ -20,10 +20,14 @@ const startServer = async () => {
             if (chat.isGroup) {
                 return null;
             }
+            
             if (message.body.length === 0) {
                 return null;
             }
-           
+            if (message.from === "status@broadcast") {
+                return null;
+            }
+              
 
             const response: any = await new Promise((resolve, reject) => {
                 handleMessage(message.body, (err: any, res: any) => {
